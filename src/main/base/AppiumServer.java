@@ -12,7 +12,7 @@ public class AppiumServer {
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         
         builder
-                .withAppiumJS(new File("/Users/murodjoni/node_modules/appium-uiautomator2-driver/node_modules/appium/build/lib"))
+                .withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
                 .usingDriverExecutable(new File("/usr/local/bin/node"))
                 .usingPort(4723)
                 .withArgument(GeneralServerFlag.LOCAL_TIMEZONE)

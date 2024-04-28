@@ -8,13 +8,13 @@ public class BaseTest {
     @BeforeMethod
     public static void launchApp() throws MalformedInputException {
         AppFactory.launchApp();
-        base.AppiumServer.start();
+        //base.AppiumServer.start();
     }
 
     @AfterMethod
     public static void closeApp() throws MalformedInputException {
-        AppiumDriver.getCurrentDriver().quit();
-        base.AppiumServer.stop();
+       // AppiumDriver.getCurrentDriver().quit();
+       // base.AppiumServer.stop();
     }
 
     @BeforeSuite
