@@ -1,3 +1,4 @@
+package driver;
 import java.net.MalformedURLException;
 
 import io.appium.java_client.AppiumDriver;
