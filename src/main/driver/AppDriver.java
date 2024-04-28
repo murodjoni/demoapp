@@ -7,11 +7,22 @@ public class AppDriver {
     private static AppDriver instance = null;
 
     private AppDriver(){
-        
+
     }
 
-    public static WebDriver getDriver(){
+    public static AppDriver getInstance(){
+        if(instance==null){
+            instance = new AppDriver();
+        }
+        return instance;
+    }
+
+    public WebDriver getDriver(){
         return driver.get();
+    }
+
+    public static WebDriver getCurrentDriver(){
+        return getInstance().getDriver();
     }
 
     public static void setDriver(){

@@ -10,7 +10,12 @@ public class AppFactory {
 
     static AppiumDriver driver;
 
-    public static void android_launchApp(UiAutomator2Options options) throws MalformedURLException {
+    public static void android_launchApp() throws MalformedURLException {
+        options.setDeviceName("emulator-5554")
+        .setPlatformVersion("14.0")
+        .setAppPackage("com.saucelabs.mydemoapp.rn")
+        .setAppActivity(".MainActivity");
+
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
         AppDriver.setDriver(driver);
         System.out.println("AndroidDriver is set");
@@ -20,4 +25,5 @@ public class AppFactory {
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/"), options);
         AppDriver.setDriver(driver);
         System.out.println("IOS_Driver is set");
+}
 }
