@@ -8,7 +8,7 @@ public class AppiumServer {
 
     static AppiumDriverLocalService server;
 
-    static void setInstance(){
+    private static void setInstance(){
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         
         builder
@@ -25,8 +25,8 @@ public class AppiumServer {
                //System.out.println(server.isRunning());
                 //server.stop();
     } 
-        static AppiumDriverLocalService getInstance(){
-            if(server==nul){
+        private static AppiumDriverLocalService getInstance(){
+            if(server == nul){
                 setInstance();
             }
             return server;
