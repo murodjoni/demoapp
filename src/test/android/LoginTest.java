@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
 
     @Test
-    public static void launchApp(){
+    public static void launchAppTest(){
         
     }
 }
